@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trinary widget</title>
+        <link rel="stylesheet" href="js/trinary_widget.css" />
+        <script src="js/trinary_widget.js"></script>
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+        <h1>Trinary widget test</h1>
+        <div id="widget-container">
+            <select id="widget">
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <br/>
+        <button id="text_set_no">No</button>
+        <button id="test_set_nutral">Nutral</button>
+        <button id="test_set_yes">Yes</button>
+        <script>
+            const trinary = trinary_widget_create(document.getElementById('widget-container'));
+
+            document.getElementById("text_set_no").addEventListener('click', function(e){
+                const el_select = document.querySelector("#widget-container select");
+                el_select.value = "no";
+                el_select.dispatchEvent(new Event('change'));
+            });
+            document.getElementById("test_set_nutral").addEventListener('click', function(e){
+                const el_select = document.querySelector("#widget-container select");
+                el_select.value = "";
+                el_select.dispatchEvent(new Event('change'));
+            });
+            document.getElementById("test_set_yes").addEventListener('click', function(e){
+                const el_select = document.querySelector("#widget-container select");
+                el_select.value = "yes";
+                el_select.dispatchEvent(new Event('change'));
+            });
+        </script>
+    </body>
+</html>

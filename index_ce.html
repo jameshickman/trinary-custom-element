@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Custom element test</title>
+    </head>
+    <body>
+        <div>
+            <trinary-input id="test-input" />
+        </div>
+        <div>
+            <button id="test-yes">Yes</button>
+            <button id="test-no">No</button>
+            <button id="test-unset">Unset</button>
+            <button id="get-value">Get Value</button>
+        </div>
+    </body>
+    <script type="module">
+        import {TrinaryElement} from "./js/trinary_ce.js";
+
+        const el_trinary = document.getElementById('test-input');
+
+        el_trinary.addEventListener('change', (e) => {
+            console.log(e);
+        });
+
+        document.getElementById('test-yes').addEventListener('click', (e) => {
+            el_trinary.value = 'true';
+        });
+        document.getElementById('test-no').addEventListener('click', (e) => {
+            el_trinary.value = 'false';
+        });
+        document.getElementById('test-unset').addEventListener('click', (e) => {
+            el_trinary.value = '';
+        });
+        document.getElementById('get-value').addEventListener('click', (e) => {
+            console.log(el_trinary.value);
+        });
+    </script>
+</html>

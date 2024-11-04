@@ -1,0 +1,55 @@
+.trinary__widget_container {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.trinary__widget_container button {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    -webkit-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.trinary__option_no {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top: 1px solid #D9E1EC !important;
+    border-bottom: 1px solid #D9E1EC !important;
+    border-left: 1px solid #D9E1EC !important;
+}
+
+.trinary__option_nutral {
+    border-top: 1px solid #D9E1EC !important;
+    border-bottom: 1px solid #D9E1EC !important;
+}
+
+.trinary__option_yes {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top: 1px solid #D9E1EC !important;
+    border-bottom: 1px solid #D9E1EC !important;
+    border-right: 1px solid #D9E1EC !important;
+}
+
+.trinary__button_selected_undefined {
+    background-color: #858585 !important;
+    color: white;
+}
+
+.trinary__button_selected_yes {
+    background-color: #06A561 !important;
+    color: white;
+}
+
+.trinary__button_selected_no {
+    background-color: #F0142F !important;
+    color: white;
+}
