@@ -5,7 +5,7 @@
     </head>
     <body>
         <div>
-            <trinary-input id="test-input" />
+            <trinary-input id="test-input" name="custom-trinary-element"/>
         </div>
         <div>
             <button id="test-yes">Yes</button>
@@ -33,7 +33,7 @@
             el_trinary.value = '';
         });
         document.getElementById('get-value').addEventListener('click', (e) => {
-            console.log(el_trinary.value);
+            console.log("Name: " + el_trinary.attributes.name.value + ", value: " + el_trinary.value);
         });
     </script>
 </html>
